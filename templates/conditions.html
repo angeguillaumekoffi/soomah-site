@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}{{ infos.titre | safe }}{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="condition" %}
+{% endblock %}
+
+{% block idbody %}{% endblock idbody %}
+{% block stylebody %}{% endblock stylebody %}
+
+<!-- Benefits of the Django application -->
+{% block container %}
+
+<div id="sec1" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>{% include "_brandname.html" %}</h1>
+        <p class="lead">Solidaires à l’utile, les uns envers les autres</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sec2" class="text-page">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>{{ infos.titre | safe }}</h2>
+        </div>
+        <div class="lead" style="margin: auto; min-width: 70%; max-width: 98%;">
+            <p class="lead">{{ infos.descri | safe }}</p>
+        </div>
+    </div>
+  </div>
+</div>
+ 
+{% endblock container %}
+

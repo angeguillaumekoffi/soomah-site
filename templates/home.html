@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}Accueil{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock %}
+
+{% block idbody %}{% endblock idbody %}
+{% block stylebody %}{% endblock stylebody %}
+
+{% block navbar-right %}
+  {% if not user.is_authenticated %}
+<a class="btn" style="background-color: blue; color: #ffffff;" href="{% url 'comptes:login' %}" role="button">Connexion</a>
+<a class="btn" style="background-color: #ff2103; color: #ffffff;" href="{% url 'comptes:signup' %}" role="button">Inscription</a>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block splash %}
+  <div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <h1 style="color:black">{% include "_brandname.html" %}</h1>
+          <p style="color:black">Solidaires à l’utile, les uns envers les autres</p>
+	  <a class="btn" style="background-color: #ff2103; color: #ffffff;" href="{% url 'comptes:signup' %}" role="button">Inscrivez-vous maintenant</a>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock splash %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+<a id="about"></a>
+
+<div class="container">
+  <div class="row">
+    {% for info in infos %}
+    <div class="col-lg-4">
+      <h2>{{ info.titre|safe }}</h2>
+      {{info.descri|safe}}
+      <p><a class="btn" style="background-color: #ff2103; color: #ffffff;" href="{{info.url}}" role="button">Voir plus &raquo;</a></p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock container %}
+
+{% block scripts %}
+<script src="{% static 'site/js/site.js' %}"></script>
+{% endblock scripts %}
+

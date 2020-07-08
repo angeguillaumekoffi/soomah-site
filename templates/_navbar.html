@@ -1,0 +1,8 @@
+<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Accueil</a></li>
+<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">A propos</a></li>
+<li {% if active_link == "howto" %}class="active"{% endif %}><a href="{% url 'howto' %}">Bien démarrer</a></li>
+<li {% if active_link == "faq" %}class="active"{% endif %}><a href="{% url 'faq' %}">FAQ</a></li>
+<li {% if active_link == "contact" %}class="active"{% endif %}><a href="{% url 'contact' %}">Nous contacter</a></li>
+<!--li><input style="border-radius: 4%; border: 2px solid #ccc; height: 2.4em; margin-top: 4%" placeholder="Recherche">
+    <button style="height: 2.5em;" class="btn btn-success" type="submit">OK</button>
+</li-->
