@@ -1,2 +1,2 @@
 # webpa
- application web d'entraide SOOMAH fait avec Django
+ application web d'entraide SOOMAH développée avec Django
