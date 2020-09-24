@@ -16,7 +16,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*!ccm#r)ib$)a0-#**hkf#8!go!wsmns5gt6vyen^l39ipwkj$'
+#SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -101,8 +101,8 @@ WSGI_APPLICATION = 'webpa.wsgi.application'
 #    "default": {
 #        'ENGINE': 'django.db.backends.mysql',
 #        'NAME': 'soomahor_web_db',
-#        'USER': 'soomahor_admin',
-#        'PASSWORD': "sdi@inphb#2015!",
+#        'USER': '****',
+#        'PASSWORD': "****",
 #        'HOST': 'localhost',
 #        'PORT': '3306'
 #    }
@@ -111,8 +111,8 @@ WSGI_APPLICATION = 'webpa.wsgi.application'
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_webpa',
-        'USER': 'root',
+        'NAME': '****',
+        'USER': '****',
         'PASSWORD': "",
         'HOST': '127.0.0.1',
         'PORT': '3306'
@@ -197,7 +197,7 @@ LOGIN_REDIRECT_URL = reverse_lazy("profiles:show_self")
 LOGIN_URL = reverse_lazy("comptes:login")
 
 # Stripe Key Settings
-STRIPE_SECRET_KEY = 'sk_live_rEbb81t1At64rUWktB9z5Eq500MJViML1x'
+STRIPE_SECRET_KEY = '****'
 #STRIPE_PUBLISHABLE_KEY = 'pk_live_0B0Rfup09xFOAuErITtvVpAZ000clQCegO' cle de test 
 
 STRIPE_PUBLISHABLE_KEY = 'pk_live_0B0Rfup09xFOAuErITtvVpAZ000clQCegO'
@@ -207,10 +207,10 @@ SUBSCRIPTION_PRICE = 55
 
 #mail config
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_HOST = 'mail.soomah.org'
+#EMAIL_HOST = ''
 #EMAIL_PORT = 465
-#EMAIL_HOST_USER = 'contact@soomah.org'
-#EMAIL_HOST_PASSWORD = '74=i,=70^d.Y.'
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = '****'
 #EMAIL_USE_TLS = True
 
 LOGGING = {
