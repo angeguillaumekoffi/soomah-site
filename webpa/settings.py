@@ -97,16 +97,6 @@ WSGI_APPLICATION = 'webpa.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-#DATABASES = {
-#    "default": {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'soomahor_web_db',
-#        'USER': '****',
-#        'PASSWORD': "****",
-#        'HOST': 'localhost',
-#        'PORT': '3306'
-#    }
-#}
 
 DATABASES = {
     "default": {
